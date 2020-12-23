@@ -81,18 +81,32 @@
 
 <meta name="description" content="题目：Windows下Cmake+VS2017+OpenSceneGraph环境搭建一、资料准备1、OSG源码下载地址：http:&#x2F;&#x2F;www.openscenegraph.org&#x2F;index.php&#x2F;download-section&#x2F;stable-releases（OpenSceneGraph-3.4.1 release 稳定版本） 2、OSG第三方依赖库下载地址：http:&#x2F;&#x2F;www.opens">
 <meta property="og:type" content="article">
-<meta property="og:title" content="“OSG环境搭建”">
-<meta property="og:url" content="https://xjjjf.github.io/2020/12/23/%E2%80%9COSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E2%80%9D/index.html">
+<meta property="og:title" content="OSG环境搭建">
+<meta property="og:url" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="佳烽的博客">
 <meta property="og:description" content="题目：Windows下Cmake+VS2017+OpenSceneGraph环境搭建一、资料准备1、OSG源码下载地址：http:&#x2F;&#x2F;www.openscenegraph.org&#x2F;index.php&#x2F;download-section&#x2F;stable-releases（OpenSceneGraph-3.4.1 release 稳定版本） 2、OSG第三方依赖库下载地址：http:&#x2F;&#x2F;www.opens">
 <meta property="og:locale">
-<meta property="og:image" content="https://xjjjf.github.io/.io//1.jpg">
-<meta property="article:published_time" content="2020-12-23T14:05:20.000Z">
-<meta property="article:modified_time" content="2020-12-23T14:28:54.692Z">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/3rdParty.jpg">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Cmake.jpg">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Cmake%E9%85%8D%E7%BD%AE1.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Cmake%E9%85%8D%E7%BD%AE2.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E6%89%B9%E7%94%9F%E6%88%90.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E6%89%B9%E7%94%9F%E6%88%902.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/output1.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/output2.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/output3.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/output4.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F1.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E6%8E%A7%E5%88%B6%E5%8F%B0.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/C++%E9%85%8D%E7%BD%AE.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/C++%E9%85%8D%E7%BD%AE1.png">
+<meta property="og:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E7%BB%93%E6%9E%9C.png">
+<meta property="article:published_time" content="2020-12-23T15:00:13.000Z">
+<meta property="article:modified_time" content="2020-12-23T15:47:22.089Z">
 <meta property="article:author" content="XJF">
 <meta property="article:tag" content="OSG">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://xjjjf.github.io/.io//1.jpg">
+<meta name="twitter:image" content="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/3rdParty.jpg">
 
 
 
@@ -122,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="https://Xjjjf.github.io/2020/12/23/“OSG环境搭建”/"/>
+  <link rel="canonical" href="https://Xjjjf.github.io/2020/12/23/OSG环境搭建/"/>
 
 
 
 
 
-  <title>“OSG环境搭建” | 佳烽的博客</title>
+  <title>OSG环境搭建 | 佳烽的博客</title>
   
 
 
@@ -299,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://Xjjjf.github.io/2020/12/23/%E2%80%9COSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E2%80%9D/">
+    <link itemprop="mainEntityOfPage" href="https://Xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="">
@@ -316,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">“OSG环境搭建”</h1>
+          <h1 class="post-title" itemprop="name headline">OSG环境搭建</h1>
         
 
         <div class="post-meta">
@@ -328,7 +342,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-23T22:05:20+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-23T23:00:13+08:00">
                 2020-12-23
               </time>
             
@@ -387,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  617
+                  1.6k
                 </span>
               
 
@@ -403,7 +417,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  6
                 </span>
               
             </div>
@@ -425,25 +439,23 @@
 
       
         <h2 id="题目：Windows下Cmake-VS2017-OpenSceneGraph环境搭建"><a href="#题目：Windows下Cmake-VS2017-OpenSceneGraph环境搭建" class="headerlink" title="题目：Windows下Cmake+VS2017+OpenSceneGraph环境搭建"></a>题目：Windows下Cmake+VS2017+OpenSceneGraph环境搭建</h2><p>一、资料准备<br>1、OSG源码下载地址：<a target="_blank" rel="noopener" href="http://www.openscenegraph.org/index.php/download-section/stable-releases%EF%BC%88OpenSceneGraph-3.4.1">http://www.openscenegraph.org/index.php/download-section/stable-releases（OpenSceneGraph-3.4.1</a> release 稳定版本）</p>
-<p>2、OSG第三方依赖库下载地址：<a target="_blank" rel="noopener" href="http://www.openscenegraph.org/index.php/download-section/dependencies%EF%BC%883rdParty_VS2017_v141_x64_V11%EF%BC%89">http://www.openscenegraph.org/index.php/download-section/dependencies（3rdParty_VS2017_v141_x64_V11）</a>  vs2019也适用<br>注：第三方库版本必须与Visual Studio版本相对应，本文所用只适用于Visual Studio2017 以上版本,，平台工具集版本为v141的情况下</p>
-<p><img src="/.io//1.jpg"></p>
+<p>2、OSG第三方依赖库下载地址：<a target="_blank" rel="noopener" href="http://www.openscenegraph.org/index.php/download-section/dependencies">http://www.openscenegraph.org/index.php/download-section/dependencies</a><br>（3rdParty_VS2017_v141_x64_V11）  vs2019也适用<br>注：第三方库版本必须与Visual Studio版本相对应，本文所用只适用于Visual Studio2017 以上版本,，平台工具集版本为v141的情况下</p>
+<p><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/3rdParty.jpg"></p>
 <p>3、数据包下载地址：<a target="_blank" rel="noopener" href="http://www.openscenegraph.org/index.php/download-section/data%EF%BC%88OpenSceneGraph-3.4">http://www.openscenegraph.org/index.php/download-section/data（OpenSceneGraph-3.4</a> standard dataset）</p>
 <p>4、编码工具下载地址：<a target="_blank" rel="noopener" href="https://cmake.org/download/">https://cmake.org/download/</a> </p>
-<p>示例：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：[[<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>],[<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>]]</span><br><span class="line">输出：<span class="number">39</span></span><br><span class="line">解释：</span><br><span class="line">转换为 [[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>],[<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>]]</span><br><span class="line"><span class="number">0b1111</span> + <span class="number">0b1001</span> + <span class="number">0b1111</span> = <span class="number">15</span> + <span class="number">9</span> + <span class="number">15</span> = <span class="number">39</span></span><br></pre></td></tr></table></figure>
+<p><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Cmake.jpg"></p>
+<p>二、编译准备<br>为了编译的顺利进行，将下载的文件组织如下：<br>在D盘建立一个OSG的文件夹，然后其他文件如下放置：<br>D:\OSG\OpenSceneGraph:源码解压后放于此，在OpenSceneGraph文件夹中再新建一个build文件，作为Cmake编译输出文件夹<br>D:\OSG\3rdParty：第三方依赖库解压后放于此<br>D:\OSG\data：数据包解压后放于此。</p>
+<p>三、安装源码<br>1、安装CMake之后，打开CMake -gui.exe。<br>2、按下图所示，填写源码路径与结果路径。<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Cmake%E9%85%8D%E7%BD%AE1.png"><br>3、点击一次Configure，出现下图所示，选择本机的VS2017版本，Win64代表编译输出64位工程，点击Finish，开始进行配置<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Cmake%E9%85%8D%E7%BD%AE2.png"><br>4、在红色表格中找到ACTUAL_3RDPARTY_DIR，将其值设置为D:/OSG/3rdParty、找到BUILD_OSG_EXAMPLES，值设置为ON、CMAKE_INSTALL_PREFIX，值为OpenSceneGraph/build/bin<br>5、再点击一次Configure，勾选BUILD_MFC_EXAMPLE<br>6、再次点击Configure，此时所有标红部分消失，点击Generate，等待完成</p>
+<p>四、VS编译项目<br>1、在第三步的结果路径中，找到OpenSceneGraph.sln，将其用VS2017打开。<br>选择生成、批生成，，对All_BUILD进行生成，选择（Debug和Release两个版本），这段编译时间很长，大概 4-5个小时。如果前面步骤没有错误的话，这一步不会报错，只有警告。设置详情如下图所示：<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E6%89%B9%E7%94%9F%E6%88%90.png"><br>2、第1步完成后，再对INSTALL也进行相应生成编译。这段时间会非常快。如图：<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E6%89%B9%E7%94%9F%E6%88%902.png"></p>
+<p>五、拷贝库文件至文件夹<br>1、在OSG文件夹下新建output文件夹，并在该文件夹下新建bin、include、lib三个文件夹，用于存放OSG编译后的动态库、头文件和库文件，如下图<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/output1.png"><br>2、拷贝D:\OSG\3rdParty下的bin、include、lib文件夹至E:\OSG\output文件夹下，选择覆盖即可。<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/output2.png"><br>3、拷贝D:\OSG\OpenSceneGraph\build下的bin、include、lib文件夹至E:\OSG\output文件夹下，选择覆盖即可。<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/output3.png"><br>4、拷贝D:\OSG\OpenSceneGraph下的include文件夹至E:\OSG\output文件夹下，选择覆盖即可。<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/output4.png"></p>
+<p>六、配置环境变量<br>1、新建系统变量OSG_FILE_PATH，值为E:\OSG\OpenSceneGraph-Data<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F1.png"><br>2、将下列路径加入到Path中<br>D:\OSG\output\bin<br>3、输入cmd命令，测试OSG是否安装成功，如下图<br>osgversion<br>osgviewer cow.osg<br>osglogo<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E6%8E%A7%E5%88%B6%E5%8F%B0.png"></p>
+<p>七、测试，新建WIN32控制台工程<br>1、在cpp中输入以下代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;windows.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;osgViewer/Viewer&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;osgDB/ReadFile&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">osgViewer::Viewer viewer;</span><br><span class="line">viewer.setSceneData(osgDB::readNodeFile(<span class="string">&quot;cow.osg&quot;</span>));</span><br><span class="line"><span class="keyword">return</span> viewer.run();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2、鼠标右键工程，选择属性，在VC++ 目录选项下，配置包含目录和库目录，如下图<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/C++%E9%85%8D%E7%BD%AE.png"><br>3、在链接器-&gt;输入选项下，配置附加依赖项，添加下列库，注：Debug模式下这些库后缀带d，Release模式下不带d，本机没有编译Debug模式的库，所以直接用Release版，如下图<br>OpenThreads.lib;osg.lib;osgDB.lib;osgUtil.lib;osgGA.lib;osgViewer.lib;osgText.lib;<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/C++%E9%85%8D%E7%BD%AE1.png"><br>4、编译运行，效果显示<br><img src="/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/%E7%BB%93%E6%9E%9C.png"></p>
+<h2 id="心得体会"><a href="#心得体会" class="headerlink" title="心得体会"></a>心得体会</h2><p>OSG环境配置了好久，一开始我根据教程一步一步配置下去，所用的版本除了VS是2019的其他都与教程版本一致，但是通过VS编译生成的时候第一次是没有报错的，这时候我在配置了环境变量，通过cmd运行也可以得到相应的效果，然后我想通过C++创建项目来调用osg生成的源码，这个时候发现一堆错误，通过百度我认为是C++的桌面开发(MFC)没有装的原因，然后我通过VS Installer修改了我的C++设置，这时候依旧报错，然后我就认为是生成文件的原因，然后我再次重新来配置，这时候文件都无法生成，一直报错，然后我就仔细在看了看教程和视频，觉得是没有勾选使用C++的桌面开发(v141)的原因，然后并没有什么用。<br>这时候我想到用别人的源码，然后我去网上找别人编译好的include、lib、bin文件，发现还是不行。我就觉得是不是要把VS版本降一下，然后我用VS2017了，发现还是不行，这个时候我觉得可能是我的电脑配置的原因，我打算用我的笔记本再试一下。我用笔记本配置了别人的源码，这个时候发现竟然好了，然后我用相同的方法再去配置第一台电脑，发现也成功了。这时候我知道C++有debug、release、x64、x86需要来勾选的，选择不同的模式、操作系统所配置的目录都是不一样的，别人的源码只生成了release模式下的，也就是一开始教程中要我们生成两个，一个是release，一个是debug，别人用的都是release，所以我需要去配置release才能正常工作。前面用debug一直报错：缺少dll文件，原因可能都是别人的源码没有生成debug的源码。最最最重要的事，就是需要添加头文件#include&lt;windows.h&gt;，不然会有很多类不能调用，系统会报错，这是咨询群大佬和我说的。为了节约时间，我也没在用VS2017重新上述步骤生成debug、release的源码，对于我初学者应该是够了，后期如果要用到那就再回到这个教程继续钻研。</p>
+<p>关于C++配置，我觉得只要勾选使用C++的桌面开发，以默认的配置即可。</p>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaochi/p/12574543.html">https://www.cnblogs.com/xiaochi/p/12574543.html</a><br>参考链接：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/rcg714786690/p/12303659.html">https://www.cnblogs.com/rcg714786690/p/12303659.html</a><br>hexo图片解决链接:<a target="_blank" rel="noopener" href="https://blog.csdn.net/xjm850552586/article/details/84101345">https://blog.csdn.net/xjm850552586/article/details/84101345</a></p>
 
-<p>复制</p>
-<p>提示：</p>
-<ol>
-<li>1 &lt;= A.length &lt;= 20</li>
-<li>1 &lt;= A[0].length &lt;= 20</li>
-<li>A[i][j] 是 0 或 1</li>
-</ol>
-<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/score-after-flipping-matrix/">https://leetcode-cn.com/problems/score-after-flipping-matrix/</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。  </p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
-<p>每一行必须是1开头，也就是说，第一列的值都是1。<br>这样也是有依据的，这样转换后就增大了每行二进制数。不管后面怎么变，都不能动摇这个基本<br>第一点就可以说整体提升，那么下面就再小刀一下，尽可能的让每一行的1的个数多点，但是不能用行转换来得到更多的1，而是通过列转换来得到更多的1，那么怎么列转换呢？转换时的依据是什么呢？<br>依据是：每一列的0个数多于1的个数时，那么这一列就转换，否则不转换。    </p>
-</blockquote>
-<h2 id="解题代码"><a href="#解题代码" class="headerlink" title="解题代码"></a>解题代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">matrixScore</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; A)</span> </span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//保证第一列都是1</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (A[i][<span class="number">0</span>] == <span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; A[<span class="number">0</span>].size(); j++)</span><br><span class="line">                &#123;</span><br><span class="line">                    A[i][j] ^= <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//保证后面每一列的1个数大于0</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt;  A[<span class="number">0</span>].size(); j++)</span><br><span class="line">        &#123;   </span><br><span class="line">            <span class="keyword">int</span> zeronum = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.size(); i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (A[i][j] == <span class="number">0</span>)</span><br><span class="line">                    zeronum++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (<span class="number">2</span> * zeronum &gt; A.size())</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.size(); i++)</span><br><span class="line">                &#123;</span><br><span class="line">                    A[i][j] ^= <span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="comment">//求和</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; A.size(); i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it = A[i].begin();</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = A[<span class="number">0</span>].size()<span class="number">-1</span>; j&gt;=<span class="number">0</span>; j--)</span><br><span class="line">                &#123;   </span><br><span class="line">                    sum = sum + (*it)*<span class="built_in">pow</span>(<span class="number">2</span>, j);</span><br><span class="line">                    it++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -492,7 +504,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://xjjjf.github.io/2020/12/23/%E2%80%9COSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E2%80%9D/" title="“OSG环境搭建”">https://xjjjf.github.io/2020/12/23/%E2%80%9COSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E2%80%9D/</a>
+    <a href="https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" title="OSG环境搭建">https://xjjjf.github.io/2020/12/23/OSG%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -688,7 +700,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9AWindows%E4%B8%8BCmake-VS2017-OpenSceneGraph%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">题目：Windows下Cmake+VS2017+OpenSceneGraph环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="nav-number">2.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E4%BB%A3%E7%A0%81"><span class="nav-number">3.</span> <span class="nav-text">解题代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%98%E7%9B%AE%EF%BC%9AWindows%E4%B8%8BCmake-VS2017-OpenSceneGraph%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">题目：Windows下Cmake+VS2017+OpenSceneGraph环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BF%83%E5%BE%97%E4%BD%93%E4%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">心得体会</span></a></li></ol></div>
             
 
           </div>
